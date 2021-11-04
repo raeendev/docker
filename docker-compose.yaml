@@ -9,6 +9,7 @@ services:
       --rpcaddr=0.0.0.0
       --rpcport=8545
       --port=30303
+      --rinkeby
       --rpcapi="admin,db,debug,personal,eth,net,web3"
       --rpccorsdomain="*"
       --rpcvhosts="*"
