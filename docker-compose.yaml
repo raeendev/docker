@@ -1,4 +1,3 @@
-
 version: '3.6'
 
 services:
@@ -10,7 +9,6 @@ services:
       --rpcaddr=0.0.0.0
       --rpcport=8545
       --port=30303
-      --rinkeby
       --rpcapi="admin,db,debug,personal,eth,net,web3"
       --rpccorsdomain="*"
       --rpcvhosts="*"
@@ -19,3 +17,8 @@ services:
     volumes:
       - /geth:/root/.ethereum/
     ports:
+      - "30303:30303"
+      - "8545:8545"
+    expose:
+      - "8545"
+      - "30303"
