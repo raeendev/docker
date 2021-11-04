@@ -1,0 +1,21 @@
+
+version: '3.6'
+
+services:
+  geth:
+    image: ethereum/client-go:stable
+    restart: always
+    command: |
+      --rpc
+      --rpcaddr=0.0.0.0
+      --rpcport=8545
+      --port=30303
+      --rinkeby
+      --rpcapi="admin,db,debug,personal,eth,net,web3"
+      --rpccorsdomain="*"
+      --rpcvhosts="*"
+      --syncmode="fast"
+      --cache=2048
+    volumes:
+      - /geth:/root/.ethereum/
+    ports:
