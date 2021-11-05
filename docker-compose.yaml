@@ -2,7 +2,7 @@ version: '3.6'
 
 services:
   geth:
-    image: ethereum/client-go:alltools-{1.10.10}
+    image: ethereum/client-go:latest
     restart: always
     command: |
       --rpc
